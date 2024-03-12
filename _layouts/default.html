@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
+    <meta charset="utf-8" />
+    
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     {% seo title=false %}
     {% include meta.html %}
@@ -11,7 +13,6 @@
   </head>
 
   <body>
-    <div id="bar"></div>
     <div class="wrapper-container">
       <div class="wrapper-masthead">
         <div class="container">
@@ -32,7 +33,7 @@
           {{ content }}
         </div>
       </div>
-
+<!--
       <div class="wrapper-footer">
         <div class="container">
           <footer class="footer">
@@ -46,6 +47,7 @@
           </footer>
         </div>
       </div>
+      -->
     </div>
   </body>
 </html>
