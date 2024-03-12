@@ -9,14 +9,30 @@ layout: default
         <h1>{{ post.title }}</h1>
 
         <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+          <p class="post_date">{% assign m = post.date | date: "%-m" %}
+{{ post.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}Januari
+  {% when '2' %}Februari
+  {% when '3' %}Maart
+  {% when '4' %}April
+  {% when '5' %}Mei
+  {% when '6' %}Juni
+  {% when '7' %}Juli
+  {% when '8' %}Augustus
+  {% when '9' %}September
+  {% when '10' %}Oktober
+  {% when '11' %}November
+  {% when '12' %}December
+{% endcase %}
+{{ post.date | date: "%Y" }}</p>
         </div>
       </a>
       <div class="entry">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lees meer</a>
     </article>
   {% endfor %}
 
@@ -24,7 +40,7 @@ layout: default
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Vorige</a>
     {% else %}
       <span>&laquo; Prev</span>
     {% endif %}
@@ -40,7 +56,7 @@ layout: default
     {% endfor %}
 
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Volgende &raquo;</a>
     {% else %}
       <span>Next &raquo;</span>
     {% endif %}
