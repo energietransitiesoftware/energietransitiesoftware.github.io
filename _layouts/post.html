@@ -6,7 +6,25 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <div>
-    <p class="author_title"><!--{{site.author}}  ·  -->{{ page.date | date: "%B %e, %Y" }}</p>
+    <p class="author_title"><!--{{site.author}}  ·  -->
+{% assign m = page.date | date: "%-m" %}
+{{ page.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}Januari
+  {% when '2' %}Februari
+  {% when '3' %}Maart
+  {% when '4' %}April
+  {% when '5' %}Mei
+  {% when '6' %}Juni
+  {% when '7' %}Juli
+  {% when '8' %}Augustus
+  {% when '9' %}September
+  {% when '10' %}Oktober
+  {% when '11' %}November
+  {% when '12' %}December
+{% endcase %}
+{{ page.date | date: "%Y" }}
+    </p>
     {% if page.last_modified_at %}
     <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: 
     {% assign m = page.last_modified_at | date: "%-m" %}
