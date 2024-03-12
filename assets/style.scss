@@ -261,7 +261,7 @@ p > img {
 }
 
 .masthead {
-  padding: 1.2em 0;
+  padding: 0.6em 0;
 
   @include mobile {
     text-align: center;
@@ -270,8 +270,7 @@ p > img {
 
 .site-avatar {
   float: left;
-  width: 4em;
-  height: 4em;
+  width: 8em;
   margin-right: 1em;
 
   @include mobile {
@@ -367,18 +366,6 @@ body:after {
     position: absolute;
     left: 0;
     content: '';
-}
-
-#bar {
-    background: #000;
-    height: 0.5em;
-    background-size: cover;
-    background-position: left 60%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1000;
 }
 
 .post h1{
