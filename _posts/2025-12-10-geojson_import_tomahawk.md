@@ -1,11 +1,11 @@
-# GeoJSON-import in Tomahawk
+---
+layout: post
+title: GeoJSON-import in Tomahawk
+categories: [Howto, Geojson]
+excerpt: Met de GeoJSON-importfunctie kun je projectgebieden rechtstreeks laden vanuit GIS-software (QGIS, ArcGIS, etc.). Tomahawk ondersteunt zowel één gebied als meerdere gebieden in één bestand. Deze documentatie beschrijft welke GeoJSON-formaten worden ondersteund en hoe de bestanden geimporteerd worden.
+---
 
-Met de GeoJSON-importfunctie kun je projectgebieden rechtstreeks laden vanuit GIS-software (QGIS, ArcGIS, etc.). Tomahawk ondersteunt zowel één gebied als meerdere gebieden in één bestand.
-
-Deze documentatie beschrijft:
-
-- welke GeoJSON-formaten worden ondersteund
-- hoe de bestanden geimporteerd worden
+Met de GeoJSON-importfunctie kun je projectgebieden rechtstreeks laden vanuit GIS-software (QGIS, ArcGIS, etc.). Tomahawk ondersteunt zowel één gebied als meerdere gebieden in één bestand. Deze documentatie beschrijft welke GeoJSON-formaten worden ondersteund en hoe de bestanden geimporteerd worden.
 
 ## Ondersteunde GeoJSON-formaten
 
